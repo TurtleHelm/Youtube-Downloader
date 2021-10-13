@@ -7,4 +7,4 @@
 - PyTube (`pip3 instlal --upgrade pytube`)
 
 ## How to Use
-Download the Files or Clone the Repo and run main.py
+Download the Files or Clone the Repo and run [main.py](https://github.com/TurtleHelm/Youtube-Downloader/blob/main/main.py)  
