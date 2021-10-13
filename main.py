@@ -5,7 +5,7 @@ import os
 link = input('Enter Link: ')
 yt = YouTube(link)
 
-print(f'Title: {yt.title}\nNumber of Views: {yt.views}\nLength of Video: {yt.length}\nRating: {yt.rating}')
+print(f'Title: {yt.title}\nNumber of Views: {yt.views}\nLength of Video: {yt.length/60:.2f}\nRating: {yt.rating:.2f}')
 
 isAudioOnly = input("Audio Only?: ").lower()
 
