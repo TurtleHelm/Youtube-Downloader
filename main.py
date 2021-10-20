@@ -9,7 +9,7 @@ print(f'Title: {yt.title}\nNumber of Views: {yt.views}\nLength of Video: {yt.len
 
 isAudioOnly = input("Audio Only?: ").lower()
 
-path = 'C:Users/aaron/Desktop/YouTube Video Downloader'
+path = 'Path To Folder'
 
 if isAudioOnly == 'yes':
     ys = yt.streams.get_audio_only()
