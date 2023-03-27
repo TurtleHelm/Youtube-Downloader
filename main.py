@@ -3,7 +3,8 @@ from pytube import YouTube, Stream, Playlist
 from os import curdir, rename
 from tqdm import tqdm
 
-def progress_callback(stream:Stream, data_chunk:bytes, bytes_remaining:int) -> None: pbar.update(round(len(data_chunk)/1000))
+def progress_callback(stream:Stream, data_chunk:bytes, bytes_remaining:int) -> None: 
+    pbar.update(round(len(data_chunk)/1000))
 
 def DownloadVideo(ytObj:YouTube, path:str='') -> None: 
     try:
@@ -13,7 +14,7 @@ def DownloadVideo(ytObj:YouTube, path:str='') -> None:
         yt = ytObj.streams.get_highest_resolution()
         print(f'Highest Resolution Found: {yt.resolution}')
         
-        print(f'Downloading {yt.title} to {path} (File Size: ~{yt.filesize_mb:.2f}mb)')
+        print(f'Downloading {yt.title} (File Size: ~{yt.filesize_mb:.2f}mb)')
         pbar = tqdm(total=round(yt.filesize_kb), unit='kb')
         
         yt.download(path)
@@ -30,7 +31,7 @@ def DownloadAudio(ytObj:YouTube, path:str='') -> None:
         yt = ytObj.streams.filter(only_audio=True).first()
         print(f'Highest Resolution Found: {yt.resolution}')
 
-        print(f'Downloading {yt.title} to {path} (File Size: ~{yt.filesize_mb:.2f}mb)')
+        print(f'Downloading {yt.title} (File Size: ~{yt.filesize_mb:.2f}mb)')
         pbar = tqdm(total=round(yt.filesize_kb), unit='kb')
 
         yt.download(path)
@@ -47,7 +48,6 @@ def DownloadYTSingle():
         global pbar
 
         path = askdirectory(initialdir=curdir)
-        
         notCorrect = 'n'
         
         while notCorrect == 'n' or notCorrect == 'no':
