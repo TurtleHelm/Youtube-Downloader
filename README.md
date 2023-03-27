@@ -1,9 +1,13 @@
 # Youtube Downloader
- Give it a YouTube Link and it will Download it for you!
+
+Give it a YouTube Link and it will Download it for you!
+Also works with Playlists & a file full of urls (split with commas)
 
 ## Requirements
+
 - Python (>= 3.10)
 - Install Requirements using the command `pip install -r reqs.txt`
 
 ## How to Use
+
 Download the Files or Clone the Repo and run [main.py](https://github.com/TurtleHelm/Youtube-Downloader/blob/main/main.py)  
